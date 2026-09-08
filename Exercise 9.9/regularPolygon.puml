@@ -1,0 +1,23 @@
+@startuml
+class RegularPolygon {
+
+    -n: int = 3
+    -side: double = 1
+    -x: double = 0
+    -y: double = 0
+
+    +RegularPolygon()
+    +RegularPolyon(newN: int, newSide: double)
+    +RegularPolygon(newN: int, newSide: double, newX: double, newY: double)
+
+    +setDetails(newN: int, newSide: double, newX: double, newY: double): void
+    +getSideLength(): double
+    +getSides(): int
+    +getX(): double
+    +getY(): double
+
+    +getPerimeter(): double
+    +getArea(): double
+
+}
+@enduml
