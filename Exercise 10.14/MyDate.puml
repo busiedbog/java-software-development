@@ -1,0 +1,19 @@
+@startuml
+class MyDate {
+
+    -year: int
+    -month: int
+    -day: int
+
+    +MyDate()
+    +MyDate(elapsedMs: long)
+    +MyDate(newYear: int, newMonth: int, newDay: int)
+
+    +getYear(): int
+    +getMonth(): int
+    +getDay(): int
+
+    +setDate(elapsedTime: long): void
+
+}
+@enduml

@@ -7,7 +7,7 @@ class RegularPolygon {
     -y: double = 0
 
     +RegularPolygon()
-    +RegularPolyon(newN: int, newSide: double)
+    +RegularPolygon(newN: int, newSide: double)
     +RegularPolygon(newN: int, newSide: double, newX: double, newY: double)
 
     +setDetails(newN: int, newSide: double, newX: double, newY: double): void
