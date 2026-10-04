@@ -1,0 +1,42 @@
+@startuml
+abstract class GeometricObject {
+    
+    -color: String = "white";
+    -filled: boolean
+    
+    #GeometricObject()
+    #GeometricObject(color: String, filled: boolean)
+
+    +getColor(): String
+    +setColor(color: String): void
+    +isFilled(): boolean
+    +setFilled(filled: boolean): void
+
+    +{abstract} getArea(): double
+    +{abstract} getPerimeter(): double
+
+}
+
+interface Comparable<Circle> {
+    +compareTo(c: Circle): int
+}
+
+class Circle extends GeometricObject implements Comparable<Circle> {
+
+    -radius: double;
+
+    #Circle()
+    #Circle(radius: double)
+
+    +getRadius(): double
+    +setRadius(newRadius: double): void
+    +getArea(): double
+    +getDiameter(): double
+    +getPerimeter(): double
+    +printCircle(): void
+    +compareTo(c: Circle): int
+    +equals(o: Object): boolean
+    +hashCode(): int
+
+}
+@enduml

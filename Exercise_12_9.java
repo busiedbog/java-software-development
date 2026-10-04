@@ -39,8 +39,8 @@ double bin2Dec(String binaryString) throws NumberFormatException, BinaryFormatEx
 
         finalNumber += numberInPlace * Math.pow(2, digitPlace);
 
-
         System.out.printf("Digit place: %d  Number: %d  Addition: %f\n", digitPlace, numberInPlace, finalNumber);
+    
     }
     
     return finalNumber;
