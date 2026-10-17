@@ -1,4 +1,4 @@
-// Template take from the book at https://liveexample.pearsoncmg.com/test/Exercise13_15_13e.txt
+// Template taken from the book at https://liveexample.pearsoncmg.com/test/Exercise13_15_13e.txt
 import java.math.*;
 import java.util.Scanner;
 
