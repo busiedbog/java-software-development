@@ -1,0 +1,64 @@
+@startuml
+
+interface Task {
+    +completion: float {abstract}
+    +name: String {abstract}
+    +description: String {abstract}
+    +reward: int {abstract}
+
+    +getCompletion(): float {abstract}
+    +getName(): String {abstract}
+    +getDescription(): String {abstract}
+    +getReward(): int {abstract}
+    +markComplete(): void {abstract}
+}
+
+class SingleUseTask implements Task {
+    -completion: float
+    -name: String
+    -description: String
+    -reward: int
+
+    -dueDate: Date
+    -completionDate: Date
+
+    +getCompletion(): float
+    +getName(): String
+    +getDescription(): String
+    +getReward(): int
+    +markComplete(): void
+    +getDueDate(): Date
+    +getCompletionDate(): Date
+}
+
+class RepeatingTask implements Task {
+    -completion: float
+    -name: String
+    -description: String
+    -reward: int
+
+    -lastCompletedDate: Date
+    -repeatTime: Date
+    -dueDate: Date
+    -timesCompleted: int
+
+    +getCompletion(): float
+    +getName(): String
+    +getDescription(): String
+    +getReward(): int
+    +markComplete(): void
+    +resetTask(): void
+}
+
+class Habit {
+    -name: String
+    -description: String
+    -relatedTask: Task
+
+    +getName(): String
+    +getDescription(): String
+    +getRelatedTask(): Task
+    +updateProgress(): void
+}
+
+@enduml
